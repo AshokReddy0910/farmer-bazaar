@@ -1,0 +1,63 @@
+{% load static %}
+<style>
+    .nav1{
+      display: flex;  
+      height: 100px;
+      background-color: lightcyan;
+    }
+    .logo{
+        height: 1000px;
+        width: 100px;
+    }
+    .imgl{
+        height:50px;
+        width:50px;
+        border: 2px solid green;
+        border-radius: 30px;
+    }
+    .inner2{
+        display: inline-flex;
+        gap:20px;
+        
+    }
+    .inner1{ 
+       display: flex;
+       margin-left: auto;
+       justify-items: space-between;
+    }
+    .inp , .sign-in , .log-in{
+        margin-top: 15px;
+    }
+    .inp1{
+        padding: 5px 0px 5px 0px;
+    }
+    .inp1 , .sign-in1 , .log-in1{
+        border: 2px solid green;
+        border-radius: 10px;
+    }
+
+
+</style>
+<div class="nav1">
+    <div class="logo">
+        <img src="{% static 'images/logo.jpg' %}" alt="logo" class="imgl">
+    </div>
+    <div class="inp">
+        <input type="text" placeholder="Search products......" class="inp1">
+    </div>
+    <div class="inner1">
+        <div class="inner2">
+            <div class="sign-in">
+                <button class="sign-in1">sign in</button>
+            </div>
+            <div class="log-in">
+                <button class="log-in1">Login in</button>
+            </div>
+            <div>
+                <div ><a href="/"><img src="{% static 'images/logo.jpg' %}" alt="profile" class="imgl"></a></div>
+                <div><a href="/"> profile</a></div>
+            </div>
+        </div>
+    </div>
+    </div>
+</div>

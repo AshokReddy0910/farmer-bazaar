@@ -1,0 +1,64 @@
+{% load static %}
+<!DOCTYPE HTML>
+<head>
+    <title>{% block title %}Home Page{% endblock %} </title>
+    <meta charset="utf-8">
+    <style>
+        body{
+            box-sizing: border-box;
+            padding:0px;
+            margin:0px;
+        }
+        .foot{
+            position:fixed;
+            bottom:0px;
+            height:250px;
+            width:100%;
+            background-color: gray;
+        }
+        .locimg{
+            height:100%;
+            width:100%;
+
+        }
+        .contact{
+            background-color: aquamarine;
+        }
+        .about{
+            background-color: rgb(7, 18, 14);
+        }
+        .footer{
+            height:100%;
+            width:100%;
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            grid-gap:10px;
+        }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}
+    {% endblock %}
+
+<footer class="foot">
+    <div class="footer">
+        <div class="location">
+            <h2>Location</h2>
+            <img src="{% static 'images/logo.jpg'%}" alt="Location" class="locimg">
+        </div>
+        <div class="about">
+            <h2 style="color: white;">About</h2>
+        </div>
+        <div class="contact">
+            <h2>Menu</h2>
+            <h4>About</h4>
+            <h4>Contact</h4>
+            <h4>Privacy policy</h4>
+            <h4>Term of use</h4>
+        </div>
+    </div>
+    
+</footer>
+</body>
+</html>
